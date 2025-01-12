@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Header from '../../components/Home/Header'
 import Slider from '../../components/Home/Slider'
@@ -30,14 +30,14 @@ export default function Home() {
 
 
       {/* {Add New Pet Option} */}
-      <View
+      <TouchableOpacity
         style={styles.addPetContainer}
-      >
-        <Ionicons 
-        style={{
-          color:Colors.PRIMARY
-        }}
-        name="paw-sharp" size={24} color="black" />
+       >
+        <Ionicons
+          style={{
+            color: Colors.PRIMARY
+          }}
+          name="paw-sharp" size={24} color="black" />
         <Text
           style={{
             fontFamily: 'poppins-semibold',
@@ -47,7 +47,7 @@ export default function Home() {
 
           Add New Pet
         </Text>
-      </View>
+      </TouchableOpacity>
 
     </View>
   )

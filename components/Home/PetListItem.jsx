@@ -10,7 +10,8 @@ export default function PetListItem({ pet }) {
                 padding: 10,
                 marginRight: 15,
                 backgroundColor: Colors.WHITE,
-                borderRadius: 10
+                borderRadius: 10,
+                marginTop: 5
             }}
         >
 

@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         borderColor: Colors.PRIMARY,
         margin: 5,
+        
     },
     selectedCategoryButton: {
         backgroundColor: Colors.PRIMARY,
