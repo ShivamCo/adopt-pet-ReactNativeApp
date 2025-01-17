@@ -23,7 +23,7 @@ export default function Header() {
             fontFamily: 'poppins-semibold',
             fontSize: 25
         }}
-        >{  (user?.fullName).toUpperCase()}</Text>
+        >{  user?.fullName}</Text>
       </View>
       <Image  source={{uri:user?.imageUrl}} style={{
         width: 40,

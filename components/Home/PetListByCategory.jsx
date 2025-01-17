@@ -5,6 +5,7 @@ import Category from './Category';
 import { getDocs, query, collection, where } from 'firebase/firestore';
 import { useCategoryStore } from '../../store/categoryStore';
 import PetListItem from './PetListItem';
+import { ScrollView } from 'react-native';
 
 export default function PetListByCategory() {
   const { currentCategory } = useCategoryStore();
@@ -33,32 +34,40 @@ export default function PetListByCategory() {
 
   return (
     <View>
+      
       <Category />
       
-      <FlatList
-        refreshing={loader}
-        onRefresh={() => GetPetList('dogs')}
-        style={styles.petsListContainer}
-        data={pets}
-        numColumns={2}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <PetListItem pet={item} />
+        <View>
 
-        )}
-      />
-      
+          <FlatList
+            refreshing={loader}
+            onRefresh={() => GetPetList('dogs')}
+            style={styles.petsListContainer}
+            data={pets}
+            horizontal={true}
+            
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <PetListItem pet={item} />
+
+            )}
+          />
+
+
+
+        </View>
+        
     </View>
   );
 }
 
 
 const styles = StyleSheet.create({
-  petsListContainer : { 
-    // flex : 1, 
-    // flexGrow :1,
-    // paddingTop: 15,
-    
-    
+  petsListContainer: {
+    display: 'flex',
+
+
+
+
   }
 })
